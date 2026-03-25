@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>安岡蒲鉾 SNS投稿提案ツール</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">安岡蒲鉾 SNS投稿提案ツール</h1>
+      <p class="header__subtitle">かまぼこの魅力を届ける投稿を簡単作成</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="form-section">
+      <div class="form-group">
+        <label class="form-label">SNSプラットフォーム</label>
+        <div class="platform-buttons" id="platformButtons">
+          <button class="platform-btn active" data-platform="instagram">
+            <span class="platform-icon">📷</span>Instagram
+          </button>
+          <button class="platform-btn" data-platform="x">
+            <span class="platform-icon">𝕏</span>X (Twitter)
+          </button>
+          <button class="platform-btn" data-platform="facebook">
+            <span class="platform-icon">📘</span>Facebook
+          </button>
+          <button class="platform-btn" data-platform="line">
+            <span class="platform-icon">💬</span>LINE
+          </button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">投稿カテゴリ</label>
+        <select class="form-select" id="categorySelect">
+          <option value="">カテゴリを選択してください</option>
+          <option value="new_product">🆕 新商品のお知らせ</option>
+          <option value="seasonal">🌸 季節限定商品</option>
+          <option value="behind_scenes">🏭 製造のこだわり・裏側</option>
+          <option value="customer_thanks">🙏 お客様への感謝</option>
+          <option value="recipe">🍳 アレンジレシピ</option>
+          <option value="history">📜 蒲鉾の歴史・豆知識</option>
+          <option value="event">🎉 イベント・催事出店</option>
+          <option value="daily">📸 日常・スタッフ紹介</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">商品名（任意）</label>
+        <input type="text" class="form-input" id="productName" placeholder="例：特選 焼き抜き蒲鉾">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">キーワード・伝えたいこと（任意）</label>
+        <input type="text" class="form-input" id="keywords" placeholder="例：手作り、無添加、期間限定">
+      </div>
+
+      <button class="generate-btn" id="generateBtn">投稿文を生成する</button>
+    </section>
+
+    <section class="result-section" id="resultSection" style="display: none;">
+      <h2 class="result-title">投稿案</h2>
+
+      <div class="result-cards" id="resultCards">
+        <!-- Generated cards will be inserted here -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 安岡蒲鉾 SNS投稿提案ツール</p>
+    </div>
+  </footer>
+
+  <script src="js/templates.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
